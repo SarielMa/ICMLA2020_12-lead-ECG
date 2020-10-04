@@ -280,8 +280,8 @@ def main_evaluate(epoch, arg):
     net_name=arg['net_name']
     loss_name=arg['loss_name']
     #loader_bba = get_dataloader_bba()
-    loader_train, loader_val, loader_test = get_dataloader(batch_size=32)
-    del loader_train, loader_val
+    loader_train, loader_val = get_dataloader(batch_size=32)
+    del loader_train
     #main_evaluate_rand(net_name, loss_name, epoch, device, loader_test, (0.05, 0.1, 0.2, 0.3, 0.4, 0.5))
     if norm_type == np.inf:
         noise_norm_list=(0.001, 0.003, 0.005, 0.007, 0.01, 0.03, 0.05, 0.1,0.2,0.3)
@@ -293,7 +293,7 @@ def main_evaluate(epoch, arg):
         print('L2 norm noise_norm_list', noise_norm_list)
     #main_evaluate_bba_spsa(net_name, loss_name, epoch, device, loader_bba, norm_type, noise_norm_list)
     #main_evaluate_wba(net_name, loss_name, epoch, device, 'bba', loader_bba, norm_type, noise_norm_list)
-    main_evaluate_wba(net_name, loss_name, epoch, device, 'test', loader_test, norm_type, noise_norm_list)
+    main_evaluate_wba(net_name, loss_name, epoch, device, 'val', loader_val, norm_type, noise_norm_list)
 #%%
 def main_train(epoch_start, epoch_end, train, arg):
 #%%

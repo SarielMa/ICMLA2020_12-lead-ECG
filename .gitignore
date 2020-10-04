@@ -1,5 +1,5 @@
 
 *.mat
 *.png
-*.csv
 *.pyc
+*.pt

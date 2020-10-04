@@ -64,8 +64,8 @@ if __name__ == '__main__':
     #%%
     parser = argparse.ArgumentParser(description='Input Parameters:')
     parser.add_argument('--cuda_id', default=0, type=int)
-    parser.add_argument('--epoch_start', default=0, type=int)
-    parser.add_argument('--epoch_end', default=70, type=int)
+    parser.add_argument('--epoch_start', default=10, type=int)
+    parser.add_argument('--epoch_end', default=10, type=int)
     parser.add_argument('--optimizer', default='Adam', type=str)
     parser.add_argument('--lr', default=0.001, type=float)
     parser.add_argument('--rand_pad', default=True, type=bool)
