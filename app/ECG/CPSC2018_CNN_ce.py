@@ -84,10 +84,10 @@ if __name__ == '__main__':
 
     #%%
     
-    loader_train, loader_val, loader_test = get_dataloader()
+    loader_train, loader_val = get_dataloader()
     main_evaluate_rand(net_name=arg['net_name'],
                        loss_name=arg['loss_name'],
                        epoch=int (arg['epoch_end'])-1,
                        device=torch.device('cuda:0' if torch.cuda.is_available() else "cpu"),
-                       loader=loader_test,
+                       loader=loader_val,
                        noise_norm_list=(0.05, 0.1 ,0.2, 0.3, 0.4, 0.5, 0.6))
