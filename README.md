@@ -11,9 +11,8 @@ Pytorch version==1.5.0
 Operation system: Windows 10 or CentOS 7
 
 # Prepare dataset
-Download data from http://2018.icbeb.org/Challenge.html
-Put the *.mat and *.csv files at data/CPSC2018/train/
-run preprocess.py
+Download data from http://2018.icbeb.org/Challenge.html.
+Put the *.mat and *.csv files at "data/CPSC2018/train/" and run preprocess.py
 
 # Training and evaluation
 Run "CPSC2018_CNN_NSR.py" for the result of "NSR" in the paper.
