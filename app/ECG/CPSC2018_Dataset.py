@@ -105,10 +105,10 @@ def load_signal(df, path):
     return signal
 #%%
 def get_dataloader(batch_size=64, num_workers=0, rand_pad=False, path='../../data/CPSC2018/'):
-    df_train_0=pd.read_csv(path+'train/train.csv')
+    df_train=pd.read_csv(path+'train/train.csv')
     df_val=pd.read_csv(path+'train/val.csv')
-    df_test_0=pd.read_csv(path+'train/test.csv')
-    df_train = pd.concat([df_train_0, df_test_0], ignore_index=True)
+    df_test=pd.read_csv(path+'train/test.csv')
+    #df_train = pd.concat([df_train_0, df_test_0], ignore_index=True)
     print('load signal:', path)
     signal_train=load_signal(df_train, path+'train/')
     signal_val=load_signal(df_val, path+'train/')
